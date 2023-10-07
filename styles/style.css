@@ -64,6 +64,11 @@ ol {
   flex-direction: column;
 }
 
+.search-form {
+  width: 711px;
+  height: 54px;
+}
+
 .result__video {
   width: 711px;
   height: 386px;
