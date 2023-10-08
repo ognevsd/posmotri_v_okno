@@ -41,6 +41,10 @@ ol {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -122,17 +126,60 @@ ol {
   height: 298px;
   width: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.content__list-item {}
+.content__list-item {
+  width: 100%;
+}
 
-.content__card-link {}
+.content__video-card {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
 
-.content__video-card {}
+.content__video-card-description-container {
+  color: #FFF;
+  font-style: normal;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  flex-shrink: 0;
+}
 
 .content__card-link_current {}
 
-.more-button {}
+.more-button {
+  display: flex;
+  width: 399px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
 
 .search-form {
   width: 711px;
@@ -141,8 +188,6 @@ ol {
   gap: 40px;
 }
 
-.search-form__fieldset {}
-
 .search-form__fieldset-title {
   color: #FFF;
   font-family: Fira Sans Condensed;
@@ -150,9 +195,44 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-bottom: 5px;
 }
 
-.search-form__label {}
+.search-form__textfield {
+  width: 225px;
+  height: 27px;
+  border: 1px solid #FFF;
+  border-right: none;
+  border-left: none;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: transparent;
+}
+
+.search-form__label {
+  display: flex;
+  gap: 5px;
+  width: fit-content;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: solid 1px #fff;
+  margin-top: 1px;
+}
 
 .search-form__checkbox-list {}
 
