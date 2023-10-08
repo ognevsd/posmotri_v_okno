@@ -65,7 +65,7 @@ a {
   border: 1px solid #FFF;
   color: #FFF;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -96,7 +96,7 @@ a {
 
 .title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -106,7 +106,7 @@ a {
 
 .title .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -135,6 +135,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__details {
@@ -147,15 +148,18 @@ a {
 
 .content__list {
   height: 298px;
-  width: 100%;
+  width: 399px;
   overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   padding: 4px;
   align-items: center;
   position: relative;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .content__video-card {
@@ -193,7 +197,7 @@ a {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -202,7 +206,7 @@ a {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -212,6 +216,8 @@ a {
   width: 194px;
   height: 103px;
   flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .more-button {
@@ -233,7 +239,7 @@ a {
 
 .search-form__fieldset-title {
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -247,13 +253,17 @@ a {
   border: 1px solid #FFF;
   border-right: none;
   border-left: none;
-  color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   background: transparent;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.70);
 }
 
 .search-form__label {
@@ -263,7 +273,7 @@ a {
   cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label .search-form__label-text:hover {
   text-decoration: underline;
 }
 
