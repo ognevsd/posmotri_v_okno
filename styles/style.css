@@ -45,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -69,6 +73,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
 }
 
 .title {
@@ -106,6 +124,7 @@ a {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -130,16 +149,33 @@ a {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.content__list-item {
-  width: 100%;
+  padding: 4px;
+  align-items: center
 }
 
 .content__video-card {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.content__video-card:active {
+  background: #545050;
+}
+
+.content__video-card:focus {
+  outline: none;
+  appearance: none;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 3px;
 }
 
 .content__video-card-description-container {
@@ -168,8 +204,6 @@ a {
   height: 103px;
   flex-shrink: 0;
 }
-
-.content__card-link_current {}
 
 .more-button {
   display: flex;
@@ -217,6 +251,16 @@ a {
   display: flex;
   gap: 5px;
   width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
 }
 
 .search-form__checkbox-list {
@@ -234,7 +278,17 @@ a {
   margin-top: 1px;
 }
 
-.search-form__checkbox-list {}
+input[type='checkbox']:checked+.search-form__pseudo-checkbox {
+  outline-offset: 0.07em;
+  outline: 1px solid white;
+  position: relative;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  max-width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
 
 .search-form__submit-button {
   width: 194px;
