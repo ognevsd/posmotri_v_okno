@@ -150,7 +150,8 @@ a {
   flex-direction: column;
   gap: 30px;
   padding: 4px;
-  align-items: center
+  align-items: center;
+  position: relative;
 }
 
 .content__video-card {
@@ -181,6 +182,10 @@ a {
 .content__video-card-description-container {
   color: #FFF;
   font-style: normal;
+}
+
+.content__card-link_current .content__video-card {
+  background-color: #545050;
 }
 
 .content__video-card-title {
