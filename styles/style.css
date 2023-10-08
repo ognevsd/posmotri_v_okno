@@ -85,6 +85,11 @@ a {
 }
 
 .button:focus {
+  outline: none;
+  appearance: none;
+}
+
+.button:focus-visible {
   outline: 1px solid #FFF;
   outline-offset: 2px;
 }
@@ -115,9 +120,9 @@ a {
   gap: 32px;
   margin: auto;
   padding: 133px 30px;
+  padding-top: 200px;
   align-items: flex-end;
   max-width: 1140px;
-
 }
 
 .result__video-container {
